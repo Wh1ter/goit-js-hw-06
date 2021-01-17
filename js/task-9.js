@@ -1,7 +1,10 @@
-Массив имен(поле name) людей, отсортированных в зависимости от количества их друзей(поле friends)
+import users from './users.js';
+// Массив имен(поле name) людей, отсортированных в зависимости от количества их друзей(поле friends)
 
 const getNamesSortedByFriendsCount = users => {
-    // твой код
+  const sortByNumOfFriends = (userOne, userTwo) =>
+    userOne['friends'].length - userTwo['friends'].length;
+  return users.sort(sortByNumOfFriends);
 };
 
 console.log(getNamesSortedByFriendsCount(users));

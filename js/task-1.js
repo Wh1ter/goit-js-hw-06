@@ -1,7 +1,8 @@
-Получить массив имен всех пользователей(поле name).
+import users from './users.js';
+// Получить массив имен всех пользователей(поле name).
 
 const getUserNames = users => {
-  // твой код
+  return users.map(user => user.name);
 };
 
 console.log(getUserNames(users));
